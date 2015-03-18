@@ -97,7 +97,7 @@ public class circle
 	
 	public boolean contains(Circle c)
 	{
-		
+		a
 	}
 
 }

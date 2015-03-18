@@ -95,5 +95,9 @@ public class circle
 		return(this.yc+this.r);
 	}
 	
+	public boolean contains(Circle c)
+	{
+		
+	}
 
 }

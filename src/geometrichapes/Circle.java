@@ -29,16 +29,22 @@ public class Circle
 	}
 	public void setR(double r)
 	{
-		this.r = r;
+		if(r<=0)
+			throw new IllegalArgumentException("il raggio non può essere minore o uguale a 0");
+		this.r = r;		
 	}
 	
 	@Override
-	public String toString() {
+	public String toString()
+	{
+		if(r<=0)
+			throw new IllegalArgumentException("il raggio non può essere minore o uguale a 0");
 		return "circle [xc=" + xc + ", yc=" + yc + ", r=" + r + "]";
 	}
 	
 	@Override
-	public int hashCode() {
+	public int hashCode()
+	{
 		final int prime = 31;
 		int result = 1;
 		long temp;
@@ -55,10 +61,12 @@ public class Circle
 		this.xc = xc;
 		this.yc = yc;
 		this.r = r;
+		
 	}
 	
 	@Override
-	public boolean equals(Object obj) {
+	public boolean equals(Object obj)
+	{
 		if (this == obj)
 			return true;
 		if (obj == null)
